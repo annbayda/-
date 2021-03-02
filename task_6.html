@@ -1,0 +1,24 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	/*6. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от переданного значения операции выполнить одну из арифметических операций (использовать функции из задания 5) и вернуть полученное значение (использовать switch).*/
+
+	function mathOperation($arg1, $arg2, $operation) {
+	switch ($operation) {
+		case "sum": 
+			return $arg1 + $arg2;
+		case "subtraction":
+			return $arg1 - $arg2;
+		case "multiply":
+			return $arg1 * $arg2; 
+		case "divide":
+			return $arg1 / $arg2;
+		}
+	}
+let oper = prompt("Введите операцию (+ - * /):");
+let a = Number(prompt("Введите первое число:"));
+let b = Number(prompt("Введите второе число:"));
+
+console.log('${a} ${oper} ${b} =', mathOperation(a, b, oper));
+
+</script>
