@@ -1,0 +1,20 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	
+	
+var basket_price = 0;
+Basket = [{name:'Сапоги', price:8000}, {name:'Пальто', price:13500}];
+Basket.push({name:'Сумка', price:5000});
+function countBasketPrice(x) {
+    for (i=0; i<Basket.length; i++) { 
+        basket_price = basket_price + Basket[i].price;
+    }
+    return basket_price;
+}
+document.write('<b>Оформление заказа:</b><br><br>');
+for (i=0;i<Basket.length;i++){document.write(Basket[i].name + ' — ' + Basket[i].price +' руб</br>');}
+document.write('</br><b>Итого: '+countBasketPrice(Basket)+' руб </b>');
+
+
+</script>
