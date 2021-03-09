@@ -1,0 +1,55 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+    'use strict'
+	
+class Product {
+    constructor({title, discount, price, color, image}) {
+        this.title = title;
+        this.discount = discount;
+        this.price = price;
+        this.image = image;
+        this.color = color;
+    }
+
+    //Наличие скидки на товар
+    hasDiscount(){
+        return Boolean(this.discount);
+    }
+
+    //Возврат % скидки
+    getDiscount(){
+        return this.discount;
+    }
+
+    //На товар фиксируется скидка
+    setDiscount(discount){
+        this.discount = discount;
+    }
+
+    //Обнуление скидки
+    getPrice(){
+        return this.price;
+    }
+
+    //Цена со скидкой
+    getTotalPrice(){
+        return this.discount ? this.price * (100 - this.discount) / 100 : this.price;
+    };
+};
+
+const luggage = new Product({
+    title:'Elephant',
+    discount: 0,
+    price: 1500,
+    color: 'Grey'
+  /*image: 'https://i.imgur.com/DLq8PHK.png'*/
+});
+
+luggage.setDiscount(30);
+
+console.log('Слон со скидкой ${luggage.getDiscount()}%!');
+console.log('Всего за ${luggage.getTotalPrice()} рублей');
+
+
+</script>
